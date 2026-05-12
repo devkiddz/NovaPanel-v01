@@ -8,8 +8,8 @@ import {
   ChevronUp,
   Plus,
   Projector,
-  ChevronDown,
-} from "lucide-react";
+  ChevronDown
+} from 'lucide-react';
 import {
   Sidebar,
   SidebarContent,
@@ -26,48 +26,39 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-  SidebarSeparator,
-} from "./ui/sidebar";
-import Link from "next/link";
-import Image from "next/image";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "./ui/collapsible";
+  SidebarSeparator
+} from './ui/sidebar';
+import Link from 'next/link';
+import Image from 'next/image';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible';
 
 const items = [
   {
-    title: "Home",
-    url: "/",
-    icon: Home,
+    title: 'Home',
+    url: '/',
+    icon: Home
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: 'Inbox',
+    url: '#',
+    icon: Inbox
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    title: 'Calendar',
+    url: '#',
+    icon: Calendar
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: 'Search',
+    url: '#',
+    icon: Search
   },
   {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
+    title: 'Settings',
+    url: '#',
+    icon: Settings
+  }
 ];
 
 const AppSidebar = () => {
@@ -91,7 +82,7 @@ const AppSidebar = () => {
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {items.map(item => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <Link href={item.url}>
@@ -99,9 +90,7 @@ const AppSidebar = () => {
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
-                  {item.title === "Inbox" && (
-                    <SidebarMenuBadge>24</SidebarMenuBadge>
-                  )}
+                  {item.title === 'Inbox' && <SidebarMenuBadge>24</SidebarMenuBadge>}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
